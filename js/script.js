@@ -1,3 +1,9 @@
+document.cookie = 'webside=ndhit219.com';
+document.cookie = 'email=ndh.it219@gmail.com; expires=Tue, 17 May 2016 05:10:00';
+setTimeout(function(){
+    alert("Chào mừng bạn đến với freetuts.net");
+}, 3000);
+
 var node = document.createElement('p');
 var content = document.createTextNode("DOM Nodes in JavaScript");
 node.appendChild(content);
@@ -14,8 +20,8 @@ node.addEventListener('click', function () {
 getElement: id, tag, css all
 Event: 3c (addEventListener)
 DOM Node: add, insert, remove
-BOM: window, screen, window.location, history,
-  navigator, popup, timing, cookies
+BOM: WINDOWS, COOKIES, screen, LOCATION, history,
+  navigator, popup, timing.
 ------------------------------------------------
   1. AngularJS - Single Page Application
   2. NodeJS - Realtime Application
@@ -25,3 +31,19 @@ BOM: window, screen, window.location, history,
   6. Electron
 
 */
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+  }
+  return "";
+}
