@@ -1,20 +1,20 @@
-document.cookie = 'webside=ndhit219.com';
-document.cookie = 'email=ndh.it219@gmail.com; expires=Tue, 17 May 2016 05:10:00';
-setTimeout(function(){
-    alert("Chào mừng bạn đến với freetuts.net");
-}, 3000);
+"use strict";
+domain = 'http://freetuts.net';
 
-var node = document.createElement('p');
-var content = document.createTextNode("DOM Nodes in JavaScript");
-node.appendChild(content);
-node.style.color = 'green';
-node.style.textAlign = 'center';
-document.getElementsByTagName('body')[0].appendChild(node);
-var w = null;
-node.addEventListener('click', function () {
-  w = window.open('http://genk.vn','Window Child','width=400px,height=400px')
-  return false;
-})
+
+
+
+// var node = document.createElement('p');
+// var content = document.createTextNode("DOM Nodes in JavaScript");
+// node.appendChild(content);
+// node.style.color = 'green';
+// node.style.textAlign = 'center';
+// document.getElementsByTagName('body')[0].appendChild(node);
+// var w = null;
+// node.addEventListener('click', function () {
+//   w = window.open('http://genk.vn','Window Child','width=400px,height=400px')
+//   return false;
+// })
 
 /*
 getElement: id, tag, css all
@@ -31,19 +31,19 @@ BOM: WINDOWS, COOKIES, screen, LOCATION, history,
   6. Electron
 
 */
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1);
-    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-  }
-  return "";
-}
+// function setCookie(cname, cvalue, exdays) {
+//   var d = new Date();
+//   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//   var expires = "expires="+d.toUTCString();
+//   document.cookie = cname + "=" + cvalue + "; " + expires;
+// }
+// function getCookie(cname) {
+//   var name = cname + "=";
+//   var ca = document.cookie.split(';');
+//   for(var i=0; i<ca.length; i++) {
+//     var c = ca[i];
+//     while (c.charAt(0)==' ') c = c.substring(1);
+//     if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+//   }
+//   return "";
+// }
