@@ -1,8 +1,43 @@
 "use strict";
-domain = 'http://freetuts.net';
+function Person(){
+    this.name = "";
+    this.email = "";
+    this.address = "";
+    this.showInfo = function(){
+        document.write("Tên là: " + this.name + "<br/>");
+        document.write("Email là: " + this.email + "<br/>");
+        document.write("Địa chỉ là: " + this.address + "<br/>");
+    };
+    return this;
+};
+Person.prototype.gender = "";
+Person.prototype.showGender = function() {
+  document.write("Giới tính là: " + this.gender + "<br/>")
+};
+//-----------------------------
+var cuong = new Person();
+cuong.name = "Nguyễn Văn Cường";
+cuong.email = "thehalfheart@gmail.com";
+cuong.address = "Buôn Ma Thuột ĐăkLăk";
+cuong.gender = "Nam";
+cuong.showInfo();
+cuong.showGender();
 
+var pattern = /freetuts/igm;
+var s = /JavaScript/;
+var t = s.test("Welcome to JavaScript word!");
+document.getElementById('result').innerHTML = t;
+function showTextVal(){
+    var value = document.getElementById('id-textbox').value;
+    alert(value);
+}
 
-
+/*
+  /pattern/modifiers
+  i: so khop (ko quan tam chu hoa hay thuong)
+  g: toan bo chuoi
+  m: ca du lieu xuong dong
+*/
 
 // var node = document.createElement('p');
 // var content = document.createTextNode("DOM Nodes in JavaScript");
